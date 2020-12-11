@@ -30,4 +30,3 @@ class car_model(models.Model):
     seat=models.CharField(max_length=20, verbose_name='seating')
     mile=models.FloatField()
 
-

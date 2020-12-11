@@ -38,5 +38,6 @@ def logout_request(request):
     messages.info(request, "Logged out successfully!")
     return redirect("home")
 
-
+def car_model(request):
+    return render(request,'car_model.html')
 

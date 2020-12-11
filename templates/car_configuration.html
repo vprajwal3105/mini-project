@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR CONGIGURATION</title>
+</head>
+<body bgcolor="cyan">
+    {% block content %}
+    <h1><center>CAR CONFIGURATION</center></h1>
+    <br />
+    <br />
+    <form>
+        <h2></h2>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </form>
+
+
+
+    {% endblock %}
+    
+</body>
+</html>

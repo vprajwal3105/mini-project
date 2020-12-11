@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1><img src="https://lh3.googleusercontent.com/AJLUDeNQOFlMU-wUcd_yQuKjHYhbpkARxz0Q5RMoBtEey8xKMcbpTIiuYRnXeyS9Et_lLJz6DmZP3wLxu0EUE9ced5gJiEOQt--ps5uTkhjLeGEGt-qyRdRTBGGgxuYRANvwOsAtuZbd1Lup_Ag0ZDNFRy3P9Z_6n-rd7Epl-p1hVGta88pDrnMCqEnnGPBp_dfJw0mSvfYg2KfUi0WExs5DsYzEHWu-Na6HAeqh8M0ZkvSEm9eTh_tknSSmtRSWAbuPtarlmqd-JnlQHxp9mrxRft1chH8hS7RReoWQ3zYDTMtxw7nqi-D7OxEN8__Orx3FUWQSnM3knuPHCtw-MiT14fy5tj6_Cd27zMXl8G81NJqvK183lJRlUZ_8JhS0Z8jZaecXRDQrqpISB4dKvqHEsCsPPjXsJHh2DXKTxRLJHEh_ldouoBxbX5JFv0WEWsVrxhTVqCUfSVQ3dq3PYFV_seOisasE0iWbK2YApMiPT870CmO15OOOkg6HCwJBzN2-hGoqoIECWt_i7Jrvi7cQeSGf27t0_03rboYOPBHJzlVBCxZadnxOSxNRoAbCj1tYvqZmqOY7YH2wX6SXEV0SjhhKcJioQJOIMCeU3makSNy-Btiw5JQxACCgjbXlFJfGoWg_vuidNdE7cKYZbnit6MX6Ml73SKvptPfBpp5VnvEOwz8NHao=w288-h128-no?authuser=0" align="left"/>
+    <p style="font-family:veranda; color:ivory; font-size:larger;">ROYAL MOTORS</p><p style="font-family:'Courier New';color:ivory; font-size:medium;"><i>......a new experience!</i></p></h1>
+ 
+ 
+<head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title> Register Page </title>  
+    <style>   
+    Body {  
+      font-family: Calibri, Helvetica, sans-serif; color:ivory; 
+      background-color: rgb(0, 0, 0);  
+    }  
+    button {   
+           background-color: #0b025e;   
+            color: rgba(255, 255, 255, 0.781);   
+            padding: 15px;   
+            margin: 10px 0px;   
+            border: none;   
+            cursor: pointer;   
+             }   
+       
+     input[type=text], input[type=password] {   
+            width: 25%;   
+            margin: 8px 0;  
+            padding: 12px 20px;   
+            display: inline-block;   
+            border: 2px solid rgb(11, 0, 75);   
+            box-sizing: border-box;   
+        }  
+     button:hover {   
+            opacity: 0.7;   
+        }   
+      .cancelbtn {   
+            width: auto;   
+            padding: 10px 18px;  
+            margin: 10px 5px;  
+        }   
+            
+         
+       
+    </style>   
+    </head>    
+    <body> 
+        <p style="color: ivory;">
+         <br>
+         <center><h1> Sign Up <br></h1></center> 
+         <form method='POST'>
+            {%csrf_token%}
+  
+                <label> Firstname </label>         
+                <input type="text" name="firstname" size="15" required/> <br> <br>  
+                <label> Lastname </label>     
+                <input type="text" name="lastname" size="15" required/> <br> <br>  
+                <label> Username </label>         
+                <input type="text" name="username" size="15" required/> <br> <br>  
+                    
+                Email:  
+                <input type="email" id="email" name="email" required/> <br>    
+                <br>  
+                Password:  
+                <input type="Password" id="pass" name="pass" required> <br>   
+                <br>   
+                Re-type password:  
+                <input type="Password" id="repass" name="repass" required> <br> <br>  
+                  
+                 
+        <button type='submit'>Submit</button>
+        Already Have An Account? <a href='/login'>Login</a>
+        </form>
+    </p>   
+    <div>
+        <p style="color: rgb(255, 0, 0);">
+            {% for message in messages %}
+            <h5> {{message}} </h5>
+            {% endfor %}
+        </p>
+    </div> 
+</body> 
+
+
+{% endblock %}
