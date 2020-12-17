@@ -1,78 +1,250 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<h1><img src="https://lh3.googleusercontent.com/AJLUDeNQOFlMU-wUcd_yQuKjHYhbpkARxz0Q5RMoBtEey8xKMcbpTIiuYRnXeyS9Et_lLJz6DmZP3wLxu0EUE9ced5gJiEOQt--ps5uTkhjLeGEGt-qyRdRTBGGgxuYRANvwOsAtuZbd1Lup_Ag0ZDNFRy3P9Z_6n-rd7Epl-p1hVGta88pDrnMCqEnnGPBp_dfJw0mSvfYg2KfUi0WExs5DsYzEHWu-Na6HAeqh8M0ZkvSEm9eTh_tknSSmtRSWAbuPtarlmqd-JnlQHxp9mrxRft1chH8hS7RReoWQ3zYDTMtxw7nqi-D7OxEN8__Orx3FUWQSnM3knuPHCtw-MiT14fy5tj6_Cd27zMXl8G81NJqvK183lJRlUZ_8JhS0Z8jZaecXRDQrqpISB4dKvqHEsCsPPjXsJHh2DXKTxRLJHEh_ldouoBxbX5JFv0WEWsVrxhTVqCUfSVQ3dq3PYFV_seOisasE0iWbK2YApMiPT870CmO15OOOkg6HCwJBzN2-hGoqoIECWt_i7Jrvi7cQeSGf27t0_03rboYOPBHJzlVBCxZadnxOSxNRoAbCj1tYvqZmqOY7YH2wX6SXEV0SjhhKcJioQJOIMCeU3makSNy-Btiw5JQxACCgjbXlFJfGoWg_vuidNdE7cKYZbnit6MX6Ml73SKvptPfBpp5VnvEOwz8NHao=w288-h128-no?authuser=0" align="left"/>
-    <p style="font-family:veranda; color:ivory; font-size:larger;">ROYAL MOTORS</p><p style="font-family:'Courier New';color:ivory; font-size:medium;"><i>......a new experience!</i></p></h1>
+  <title>Services - Royal Motors Bootstrap Template</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Royal Motors - v2.1.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-Royal Motors/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="/"><span>Royal Motors</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li class="drop-down"><a href="">Car Model </a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">Test Drive</a></li>
+          <li><a href="team.html">Customisation</a></li>
+          <li><a href="/login">Login</a></li>
+          <li class="active"><a href="/register">Registration</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Registration Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Registration</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Registration</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Registration Section -->
+
  
- 
-<head>  
-    <meta name="viewport" content="width=device-width, initial-scale=1">  
-    <title> Register Page </title>  
-    <style>   
-    Body {  
-      font-family: Calibri, Helvetica, sans-serif; color:ivory; 
-      background-color: rgb(0, 0, 0);  
-    }  
-    button {   
-           background-color: #0b025e;   
-            color: rgba(255, 255, 255, 0.781);   
-            padding: 15px;   
-            margin: 10px 0px;   
-            border: none;   
-            cursor: pointer;   
-             }   
-       
-     input[type=text], input[type=password] {   
-            width: 25%;   
-            margin: 8px 0;  
-            padding: 12px 20px;   
-            display: inline-block;   
-            border: 2px solid rgb(11, 0, 75);   
-            box-sizing: border-box;   
-        }  
-     button:hover {   
-            opacity: 0.7;   
-        }   
-      .cancelbtn {   
-            width: auto;   
-            padding: 10px 18px;  
-            margin: 10px 5px;  
-        }   
+
+    
+
+    <!-- ======= Registration Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+        <form method='POST'>
+        {%csrf_token%}
+
+            <label> Firstname </label>         
+            <input type="text" name="firstname" size="15" required/> <br> <br>  
+            <label> Lastname </label>     
+            <input type="text" name="lastname" size="15" required/> <br> <br>  
+            <label> Username </label>         
+            <input type="text" name="username" size="15" required/> <br> <br>  
+            <label> Email </label>  
+            <input type="email" id="email" name="email" required/> <br>    
+            <br>  
+            Password:  
+            <input type="Password" id="pass" name="pass" required> <br>   
+            <br>   
+            Re-type password:  
+            <input type="Password" id="repass" name="repass" required> <br> <br>  
             
-         
-       
-    </style>   
-    </head>    
-    <body> 
-        <p style="color: ivory;">
-         <br>
-         <center><h1> Sign Up <br></h1></center> 
-         <form method='POST'>
-            {%csrf_token%}
-  
-                <label> Firstname </label>         
-                <input type="text" name="firstname" size="15" required/> <br> <br>  
-                <label> Lastname </label>     
-                <input type="text" name="lastname" size="15" required/> <br> <br>  
-                <label> Username </label>         
-                <input type="text" name="username" size="15" required/> <br> <br>  
-                    
-                Email:  
-                <input type="email" id="email" name="email" required/> <br>    
-                <br> <br>  
-                Password:  
-                <input type="Password" id="pass" name="pass" required> <br>   
-                <br> <br>  
-                Re-type password:  
-                <input type="Password" id="repass" name="repass" required> <br> <br>  
-                  
-                 
-        <button type='submit'>Submit</button>
-        Already Have An Account? <a href='#'>Login</a>
+            
+            <button type='submit'>Submit</button>
+            Already Have An Account? <a href='/login'>Login</a>
         </form>
-    </p>    
-</body> 
+
+        <div>
+            <p style="color: rgb(255, 0, 0);">
+            {% for message in messages %}
+            <h5> {{message}} </h5>
+            {% endfor %}
+            </p>
+        </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Royal Motors</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Royal Motors</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-Royal Motors/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
 
 
-{% endblock %}
+
+ 

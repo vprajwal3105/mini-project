@@ -1,12 +1,34 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
-
+from django.contrib import messages
 
 
 # Create your views here
 
-def home(request):
-    return render(request,'home.html')
+def index(request):
+    return render(request,'index.html')
+
+def about(request):
+    return render(request,'about.html')
+
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request,user)
+            return redirect("/")
+        else:
+            messages.info(request,'Invalid username and/or password')
+            return redirect('login')
+
+    else:
+        return render(request,'login.html')
+
 
 def register(request):
     if request.method == 'POST':
@@ -19,25 +41,27 @@ def register(request):
 
         if password1==password2:
             if User.objects.filter(username=username).exists():
-                print('username taken')
+                messages.info(request,'username taken')
+                return redirect('register')
             elif User.objects.filter(email=email).exists():
-                print('email taken')
+                messages.info(request,'email taken')
+                return redirect('register')
             else:
                 user = User.objects.create_user(username=username, password=password1, first_name=first_name, last_name=last_name, email=email)
                 user.save();
-                print('user created')
+                messages.info(request,'user created')
+                return redirect('login')
+                
 
         else:
-            print('password not matching...')
-            return redirect('/')
+            messages.info(request,'password not matching...')
+            return redirect('register.html')
+        return redirect("/")
     
     else:
         return render(request,'register.html')
 
-def logout_request(request):
-    messages.info(request, "Logged out successfully!")
-    return redirect("home")
 
-def car_model(request):
-    return render(request,'car_model.html')
+
+
 
